@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Banner render banner should render the banner text 1`] = `ShallowWrapper {}`;
+
+exports[`Banner render banner should render the banner view 1`] = `ShallowWrapper {}`;

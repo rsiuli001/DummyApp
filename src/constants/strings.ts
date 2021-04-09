@@ -1,0 +1,13 @@
+export const ENTER_NAME: string = 'Enter user name';
+export const DEVICE_LABEL: string = 'The application is running on:';
+export const SIMULATOR: string = 'Simulator';
+export const PHYSICAL_DEVICE: string = 'Physical device';
+export const WELCOME: string = 'Welcome';
+export const PRESS_ME: string = 'Press me';
+export const BUTTON_VARIANT: string = '4 variations of button';
+export const SCREEN_SWIPED: string = 'Screen swiped';
+export const NAVIGATE_TO: string = 'Navigate to';
+export const SCREEN_ONE: string = 'Screen One';
+export const SCREEN_TWO: string = 'Screen Two';
+export const SCREEN_THREE: string = 'Screen Three';
+export const SWIPE_TO_CONTINUE: string = 'Swipe to continue';
