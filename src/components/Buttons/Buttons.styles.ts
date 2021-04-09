@@ -83,8 +83,14 @@ const ButtonsStyle = StyleSheet.create({
     paddingHorizontal: 10,
     fontWeight: '600',
   },
-  textLightBlue: { color: Colors.LIGHT_BLUE, fontWeight: '600' },
-  textWhite: { color: Colors.WHITE, fontWeight: '600' },
+  textLightBlue: {
+    color: Colors.LIGHT_BLUE,
+    fontWeight: '600',
+  },
+  textWhite: {
+    color: Colors.WHITE,
+    fontWeight: '600',
+  },
 });
 
 export default ButtonsStyle;

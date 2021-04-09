@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme';
 import React from 'react';
 import { TouchableOpacity, View } from 'react-native';
-import { ScreenList } from '../../';
+import ScreenList from '../ScreenList';
 
 describe('Screen List', () => {
   describe('rendering list', () => {
