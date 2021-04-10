@@ -10,12 +10,6 @@ jest.mock('react-native-gesture-handler', () => {
   return Swipable;
 });
 
-// // jest.mock('connect', () => jest.fn());
-// jest.mock('react-redux', () => ({
-//   connect: jest.fn(),
-//   // useSelector: jest.fn((data) => data),
-// }));
-
 jest.mock('react-redux', () => {
   return {
     connect: (mapStateToProps, mapDispatchToProps) => (ReactComponent) => ({
