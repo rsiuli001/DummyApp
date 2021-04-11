@@ -2,6 +2,25 @@ module.exports = {
   root: true,
   extends: ['airbnb', 'prettier', 'prettier/react'],
   parser: 'babel-eslint',
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
+  globals: {
+    React: true,
+    google: true,
+    mount: true,
+    mountWithRouter: true,
+    shallow: true,
+    shallowWithRouter: true,
+    context: true,
+    expect: true,
+    jsdom: true,
+    JSX: true,
+  },
   rules: {
     'import/prefer-default-export': 0,
     'class-methods-use-this': 0,

@@ -5,7 +5,7 @@ import BannerStyle from './Banner.styles';
 
 interface BannerProps {
   deviceType: boolean;
-  styles: object;
+  styles: any;
 }
 
 const Banner: FC<BannerProps> = ({ deviceType, styles }): JSX.Element => {

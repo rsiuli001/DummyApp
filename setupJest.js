@@ -5,7 +5,7 @@ import 'react-native-gesture-handler/jestSetup';
 global.fetch = require('jest-fetch-mock');
 
 jest.mock('react-native-gesture-handler', () => {
-  const Swipable = require('react-native-gesture-handler/mock-swipable');
+  const Swipable = require('react-native-gesture-handler');
   Swipable.default.call = () => {};
   return Swipable;
 });

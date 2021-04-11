@@ -7,12 +7,7 @@ describe('Screen List', () => {
   describe('rendering list', () => {
     const onPressEvent = jest.fn();
     const wrapper = shallow(
-      <ScreenList
-        text="screenName"
-        color={'red'}
-        onPress={onPressEvent}
-        screenName="screenName"
-      />
+      <ScreenList text="screenName" color="red" onPress={onPressEvent} screenName="screenName" />
     );
 
     it('should render the container view', () => {
@@ -26,15 +21,14 @@ describe('Screen List', () => {
     it('onPress event works', () => {
       const onPressEvent = jest.fn();
       const wrapper = shallow(
-        <ScreenList
-          text="screenName"
-          color={'red'}
-          onPress={onPressEvent}
-          screenName="screenName"
-        />
+        <ScreenList text="screenName" color="red" onPress={onPressEvent} screenName="screenName" />
       );
 
-      wrapper.find(TouchableOpacity).first().prop('onPress')!({} as any);
+      const button = wrapper.find(TouchableOpacity).first().props();
+      if (button.onPress) {
+        const onPressParam: any = {};
+        button.onPress(onPressParam);
+      }
       expect(onPressEvent.mock.calls.length).toBe(1);
     });
   });
