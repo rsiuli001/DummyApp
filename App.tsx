@@ -11,8 +11,8 @@
 import React, { FC } from 'react';
 import { LogBox, SafeAreaView, StyleSheet } from 'react-native';
 import { Provider } from 'react-redux';
-import { store } from './src/redux';
 import { NavigationContainer } from '@react-navigation/native';
+import { store } from './src/redux';
 import MainStack from './src/navigation';
 
 const App: FC = (): JSX.Element => {
@@ -22,7 +22,7 @@ const App: FC = (): JSX.Element => {
     <Provider store={store}>
       <SafeAreaView style={styles.container}>
         <NavigationContainer>
-          <MainStack></MainStack>
+          <MainStack />
         </NavigationContainer>
       </SafeAreaView>
     </Provider>

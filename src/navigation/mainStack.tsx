@@ -8,25 +8,22 @@ const { Screen, Navigator } = createStackNavigator();
 
 const MainStack: FC = (): JSX.Element => {
   return (
-    <Navigator
-      screenOptions={{ gestureEnabled: false }}
-      initialRouteName={ScreenName.SCREEN_ONE}
-    >
+    <Navigator screenOptions={{ gestureEnabled: false }} initialRouteName={ScreenName.SCREEN_ONE}>
       <Screen
         name={ScreenName.SCREEN_ONE}
         component={ScreenOne}
         options={{ title: String.SCREEN_ONE }}
-      ></Screen>
+      />
       <Screen
         name={ScreenName.SCREEN_TWO}
         component={ScreenTwo}
         options={{ title: String.SCREEN_TWO }}
-      ></Screen>
+      />
       <Screen
         name={ScreenName.SCREEN_THREE}
         component={ScreenThree}
         options={{ title: String.SCREEN_THREE }}
-      ></Screen>
+      />
     </Navigator>
   );
 };

@@ -12,10 +12,7 @@ interface ScreenTwoProps {
   navigation: any;
 }
 
-export const ScreenTwo: React.FC<ScreenTwoProps> = ({
-  userName,
-  navigation,
-}): JSX.Element => {
+export const ScreenTwo: React.FC<ScreenTwoProps> = ({ userName, navigation }): JSX.Element => {
   const onPress = (screenName: string) => {
     navigation.navigate(screenName);
   };
@@ -47,7 +44,7 @@ export const ScreenTwo: React.FC<ScreenTwoProps> = ({
         screenName={ScreenName.SCREEN_THREE}
       />
 
-      <Buttons></Buttons>
+      <Buttons />
     </View>
   );
 };

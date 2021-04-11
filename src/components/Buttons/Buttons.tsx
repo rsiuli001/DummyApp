@@ -1,9 +1,9 @@
 import React from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import Swipable from 'react-native-gesture-handler/Swipeable';
+import LineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import * as String from '../../constants/strings';
 import * as Colors from '../../constants/colors';
-import LineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import ButtonStyles from './Buttons.styles';
 
 const Buttons: React.FC = (): JSX.Element => {
@@ -43,21 +43,14 @@ const Buttons: React.FC = (): JSX.Element => {
     return (
       <Swipable
         containerStyle={ButtonStyles.swipeContainer}
-        renderLeftActions={renderSwipeLeftAction}
-      >
+        renderLeftActions={renderSwipeLeftAction}>
         <View style={ButtonStyles.swipeContent}>
           <View style={ButtonStyles.swipeBox}>
-            <LineIcons
-              name="diamond"
-              size={20}
-              color={Colors.WHITE}
-            ></LineIcons>
+            <LineIcons name="diamond" size={20} color={Colors.WHITE} />
           </View>
 
           <View style={ButtonStyles.swipeTextContainer}>
-            <Text style={ButtonStyles.textWhite}>
-              {String.SWIPE_TO_CONTINUE}
-            </Text>
+            <Text style={ButtonStyles.textWhite}>{String.SWIPE_TO_CONTINUE}</Text>
           </View>
         </View>
       </Swipable>

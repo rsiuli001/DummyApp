@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { ScreenOne } from '../ScreenOne';
 import { TextInput, View } from 'react-native';
+import { ScreenOne } from '../ScreenOne';
 import { Banner, ScreenList } from '../../../components';
 
 describe('Screen one Tests', () => {

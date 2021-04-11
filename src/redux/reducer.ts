@@ -16,9 +16,8 @@ const initialState: StoreType = {
 const reducer = (state = initialState, action: Action) => {
   if (action.type === ActionTypes.ADD_USER) {
     return { userName: action.payload.userName };
-  } else {
-    return state;
   }
+  return state;
 };
 
 export default reducer;

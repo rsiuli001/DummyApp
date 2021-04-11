@@ -12,8 +12,7 @@ const Banner: FC<BannerProps> = ({ deviceType, styles }): JSX.Element => {
   return (
     <View style={styles}>
       <Text style={BannerStyle.bannerText}>
-        {Strings.DEVICE_LABEL}{' '}
-        {deviceType ? Strings.SIMULATOR : Strings.PHYSICAL_DEVICE}
+        {Strings.DEVICE_LABEL} {deviceType ? Strings.SIMULATOR : Strings.PHYSICAL_DEVICE}
       </Text>
     </View>
   );

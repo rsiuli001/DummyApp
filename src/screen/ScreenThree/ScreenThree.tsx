@@ -12,10 +12,7 @@ interface ScreenThreeProps {
   navigation: any;
 }
 
-export const ScreenThree: FC<ScreenThreeProps> = ({
-  userName,
-  navigation,
-}): JSX.Element => {
+export const ScreenThree: FC<ScreenThreeProps> = ({ userName, navigation }): JSX.Element => {
   const onPress = (screenName: string) => {
     navigation.navigate(screenName);
   };

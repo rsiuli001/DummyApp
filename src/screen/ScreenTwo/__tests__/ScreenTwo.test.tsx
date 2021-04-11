@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { ScreenTwo } from '../ScreenTwo';
 import { View } from 'react-native';
+import { ScreenTwo } from '../ScreenTwo';
 import { Buttons, ScreenList } from '../../../components';
 
 describe('Screen two Tests', () => {

@@ -1,14 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { ScreenThree } from '../ScreenThree';
 import { View } from 'react-native';
+import { ScreenThree } from '../ScreenThree';
 import { ScreenList } from '../../../components';
 
 describe('Screen three Tests', () => {
   describe('rendering screen one', () => {
-    const wrapper = shallow(
-      <ScreenThree userName="userName" navigation={{}} />
-    );
+    const wrapper = shallow(<ScreenThree userName="userName" navigation={{}} />);
 
     it('should render view', () => {
       expect(wrapper).toMatchSnapshot();

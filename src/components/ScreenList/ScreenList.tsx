@@ -9,18 +9,11 @@ interface ScreenListProps {
   screenName: string;
 }
 
-const ScreenList: React.FC<ScreenListProps> = ({
-  text,
-  color,
-  onPress,
-  screenName,
-}) => {
+const ScreenList: React.FC<ScreenListProps> = ({ text, color, onPress, screenName }) => {
   return (
     <View style={ScreenListStyles.container}>
       <TouchableOpacity onPress={() => onPress(screenName)}>
-        <Text style={{ ...ScreenListStyles.navigationText, color: color }}>
-          {text}
-        </Text>
+        <Text style={{ ...ScreenListStyles.navigationText, color }}>{text}</Text>
       </TouchableOpacity>
     </View>
   );

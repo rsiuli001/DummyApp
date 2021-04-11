@@ -1,8 +1,8 @@
 import React, { FC, useEffect, useState } from 'react';
 import { View, Text, TextInput } from 'react-native';
+import { connect } from 'react-redux';
 import { Banner, ScreenList } from '../../components';
 import * as ActionTypes from '../../constants/actionTypes';
-import { connect } from 'react-redux';
 import * as ScreenName from '../../constants/screenName';
 import * as Strings from '../../constants/strings';
 import * as Colors from '../../constants/colors';
@@ -17,11 +17,7 @@ interface DispatchProp {
   addUser: (userName: string) => any;
 }
 
-export const ScreenOne: FC<any> = ({
-  navigation,
-  userName,
-  addUser,
-}: any): JSX.Element => {
+export const ScreenOne: FC<any> = ({ navigation, userName, addUser }: any): JSX.Element => {
   const [isSimulator, setIsSimulator] = useState(null);
 
   useEffect(() => {
@@ -36,10 +32,7 @@ export const ScreenOne: FC<any> = ({
 
   return (
     <View style={ScreenOneStyle.container}>
-      <Banner
-        deviceType={isSimulator || false}
-        styles={ScreenOneStyle.deviceTypeContainer}
-      />
+      <Banner deviceType={isSimulator || false} styles={ScreenOneStyle.deviceTypeContainer} />
       <View style={ScreenOneStyle.userNameContainer}>
         <Text style={ScreenOneStyle.text}>
           {Strings.WELCOME} {userName}
@@ -70,21 +63,20 @@ export const ScreenOne: FC<any> = ({
         value={userName}
         onChangeText={(text) => addUser(text)}
         placeholder={Strings.ENTER_NAME}
-      ></TextInput>
+      />
     </View>
   );
 };
 
 const mapStateToProps = ({ userName }: StateProp) => {
   return {
-    userName: userName,
+    userName,
   };
 };
 
 const mapDispatchToProps = (dispatch: any): DispatchProp => {
   return {
-    addUser: (userName: string) =>
-      dispatch({ type: ActionTypes.ADD_USER, payload: { userName } }),
+    addUser: (userName: string) => dispatch({ type: ActionTypes.ADD_USER, payload: { userName } }),
   };
 };
 
